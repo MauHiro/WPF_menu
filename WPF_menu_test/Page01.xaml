@@ -1,0 +1,19 @@
+﻿<Page x:Class="WPF_menu_test.Page01"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_menu_test"
+      mc:Ignorable="d" 
+      d:DesignHeight="419" d:DesignWidth="792"
+      Title="Page01">
+
+    <Grid Background="#f4eee9">
+
+        <StackPanel Margin="70 25 25 25">
+            <TextBox x:Name="TXTmensagem" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" TextWrapping="Wrap" Width="275" FontFamily="Roboto" VerticalScrollBarVisibility="Visible" UseLayoutRounding="True" ScrollViewer.CanContentScroll="True" VerticalAlignment="Top" TextOptions.TextHintingMode="Animated" Padding="3"/>
+            <Button x:Name="BTentulho" Content="ENTULHO" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="75" Height="75" Click="BTentulho_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

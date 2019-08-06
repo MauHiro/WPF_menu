@@ -1,0 +1,81 @@
+﻿<Page x:Class="WPF_menu_test.Page02"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_menu_test"
+      mc:Ignorable="d" 
+      d:DesignHeight="419" d:DesignWidth="792"
+      Title="Page02">
+
+    <Grid Background="#f4eee9">
+
+        <Grid Width="370" HorizontalAlignment="Left" Margin="80,30,30,30">
+            <TextBlock Text="ITEM" HorizontalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="22" Foreground="#FF515151"/>
+        </Grid>
+        <Grid Width="300" HorizontalAlignment="Left" Margin="470,30,30,30">
+            <TextBlock Text="CRAFT" HorizontalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="22" Foreground="#FF515151"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1" Background="#FFB6A390" Width="370" HorizontalAlignment="Left" Margin="80,80,30,30">
+            <ScrollViewer>
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85"/>
+                        <ColumnDefinition Width="85"/>
+                        <ColumnDefinition Width="85"/>
+                        <ColumnDefinition Width="85"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Rectangle Style="{StaticResource ItemBox}"></Rectangle>
+                        <Grid Margin="10, 10, 10, 5">
+                            <TextBlock Style="{StaticResource ItemQnt}" x:Name="TXTmadeira" Text="00"/>
+                            <TextBlock Style="{StaticResource ItemNome}" Text="MADEIRA"/>
+                        </Grid>                        
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <Rectangle Style="{StaticResource ItemBox}"></Rectangle>
+                        <Grid Margin="10, 10, 10, 5">
+                            <TextBlock Style="{StaticResource ItemQnt}" x:Name="TXTpedra" Text="00"/>
+                            <TextBlock Style="{StaticResource ItemNome}" Text="PEDRA"/>
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid HorizontalAlignment="Right" Background="#FFB6A390" Width="280" Margin="30,80,30,30">
+            <ScrollViewer>
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="85"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid x:Name="CR_axe" Grid.Column="0" Visibility="Hidden">
+                        <Rectangle Style="{StaticResource CraftBox}"></Rectangle>
+                        <Grid Margin="15 10 15 10">
+                            <Button x:Name="BT_CR_axe" Style="{StaticResource CraftBtTemp}" Content="CRAFT" Width="55" Height="25" HorizontalAlignment="Right" Margin="0 -30 0 0" Click="BT_CR_axe_Click" IsEnabled="false"/>
+                            <TextBlock Style="{StaticResource ItemQnt}" x:Name="TXTmachado" Text="00"/>
+                            <TextBlock Style="{StaticResource ItemNome}" Text="MACHADO"/>
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
